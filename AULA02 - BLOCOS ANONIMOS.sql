@@ -1,0 +1,13 @@
+SET SERVEROUTPUT ON  /*SETA A IMPRESSÃO COMO ON */
+
+/*DECLARA VARIÁVEL COLOCA UM NÚMERO MÁXIMO DE 11 DIGITOS 
+COM 2 DIGITOS DECIMAIS E INICIALIZA A MESMA COMO 500
+*/
+DECLARE 
+    vNumero1    NUMBER(11,2) := 500; /* := É O SIMBOLO DE PADRÃO*/
+    vNumero2    NUMBER(11,2) := 400;
+    vMedia      NUMBER(11,2);
+BEGIN    
+    VMedia := (vNumero1 + vNumero2) /2;
+    DBMS_OUTPUT.PUT_LINE('Média= ' || VMedia);
+END;    
