@@ -5,3 +5,11 @@ DECLARE
 BEGIN 
     DBMS_OUTPUT.PUT_LINE('Pi= '||vpi);
 END;    
+
+
+SET SERVEROUTPUT ON
+DECLARE
+    vNome CONSTANT VARCHAR(200) := 'Murilo';
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('OLÁ ' || vNome);
+END;        
