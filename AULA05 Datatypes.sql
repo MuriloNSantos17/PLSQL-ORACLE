@@ -14,10 +14,16 @@ BEGIN
 END;    
 
 SET SERVEROUTPUT ON
-    DECLARE vNota1 int := 10;
-    DECLARE vNota2 int := 10;
-    DECLARE vNota3 int := 10;
-    DECLARE vMedia number(1,2) := (vNota1 + vNota2 + vNota3) / 3;
+    DECLARE 
+     vNota1 int := 10;
+     vNota2 int := 8;
+     vNota3 int := 10;
+     vMedia NUMBER(11,2) := (vNota1+vNota2+vNota3) / 3;
 BEGIN
-    DBMS_OUTPUT.PUT_LINE('Média: '||vMedia);
+    DBMS_OUTPUT.PUT_LINE('Média: ' || vMedia);
 END;    
+
+desc employees;
+
+
+DECLARE vFirst_Name employees.first_name%type;
