@@ -23,6 +23,19 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Média: ' || vMedia);
 END;    
 
+
+SET SERVEROUTPUT ON
+    DECLARE isDevelop boolean := true;
+BEGIN
+    IF isDevelop = TRUE
+    THEN
+        DBMS_OUTPUT.PUT_LINE('É um programador');
+    ElSE    
+        DBMS_OUTPUT.PUT_LINE('Não é um programador');
+    END IF;    
+END;    
+
+
 desc employees;
 
 
