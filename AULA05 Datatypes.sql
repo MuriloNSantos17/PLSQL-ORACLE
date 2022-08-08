@@ -16,10 +16,17 @@ END;
 SET SERVEROUTPUT ON
     DECLARE 
      vNota1 int := 10;
-     vNota2 int := 8;
-     vNota3 int := 10;
+     vNota2 int := 2;
+     vNota3 int := 4;
      vMedia NUMBER(11,2) := (vNota1+vNota2+vNota3) / 3;
 BEGIN
+    IF(vMedia > 7)
+        THEN
+        DBMS_OUTPUT.PUT_LINE('Aprovado');
+    ELSE    
+        DBMS_OUTPUT.PUT_LINE('Reprovado');
+    END IF;
+    
     DBMS_OUTPUT.PUT_LINE('Média: ' || vMedia);
 END;    
 
